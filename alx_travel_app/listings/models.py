@@ -9,7 +9,7 @@ class Listing(models.Model):
     name = models.CharField(max_length=128)
     description = models.TextField(max_length=200)
     location = models.CharField(max_length=128)
-    pricepernight = models.DecimalField(decimal_places=2)
+    pricepernight = models.DecimalField(decimal_places=2, max_digits=10)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
